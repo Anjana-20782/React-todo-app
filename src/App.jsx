@@ -7,6 +7,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-xl mx-auto p-6">
+  
         <Header />
         <TodoForm />
         <TodoList />

@@ -25,9 +25,12 @@ export default function TodoForm() {
         onChange={(e) => setText(e.target.value)}
       />
 
-      <button className="bg-blue-600 text-white px-4 py-2 rounded">
-        Add
-      </button>
+      <button
+  className="ml-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow"
+>
+  Add
+</button>
+
     </form>
   );
 }

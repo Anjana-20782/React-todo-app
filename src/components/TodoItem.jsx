@@ -23,30 +23,31 @@ export default function TodoItem({ todo }) {
         <span>{todo.text}</span>
       )}
 
-      <div className="flex gap-2">
-        {editing ? (
-          <button
-            onClick={saveEdit}
-            className="bg-green-500 text-white px-3 py-1 rounded"
-          >
-            Save
-          </button>
-        ) : (
-          <button
-            onClick={() => setEditing(true)}
-            className="bg-yellow-500 text-white px-3 py-1 rounded"
-          >
-            Edit
-          </button>
-        )}
+     <div className="flex gap-2">
+  {editing ? (
+    <button
+      onClick={saveEdit}
+      className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-lg shadow"
+    >
+      Save
+    </button>
+  ) : (
+    <button
+      onClick={() => setEditing(true)}
+      className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-lg shadow"
+    >
+      Edit
+    </button>
+  )}
 
-        <button
-          onClick={() => deleteTodo(todo.id)}
-          className="bg-red-500 text-white px-3 py-1 rounded"
-        >
-          Delete
-        </button>
-      </div>
+  <button
+    onClick={() => deleteTodo(todo.id)}
+    className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg shadow"
+  >
+    Delete
+  </button>
+</div>
+
     </li>
   );
 }
